@@ -7,7 +7,8 @@ without having to setup a server or any complicated configurations.
 
 ## Install
 
-Git clone/fork this repo.
+- Git clone/fork this repo.
+- Run `npm install` from the CLI
 
 ## Usage
 
