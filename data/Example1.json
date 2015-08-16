@@ -1,0 +1,8 @@
+{
+  "component": "Home",
+  "slug": "info-news",
+  "title": "Info News",
+  "props": {
+    "description": "Hello this is a test paragraph."
+  }
+}

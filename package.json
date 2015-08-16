@@ -1,0 +1,42 @@
+{
+  "name": "react-polaroid",
+  "version": "1.0.0",
+  "description": "Static HTML website generator using ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass scss/index.scss public/css/index.css",
+    "html": "babel-node index.js",
+    "build": "npm run css; npm run html",
+    "lint": "eslint * --quiet",
+    "test": "npm run lint; babel-node tests/*.js | faucet",
+    "validate": "npm run test && npm outdated --depth 0"
+  },
+  "pre-commit": [
+    "validate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasco3/react-polaroid.git"
+  },
+  "keywords": [
+    "ReactJS"
+  ],
+  "author": "Jorge Cuadra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasco3/react-polaroid/issues"
+  },
+  "homepage": "https://github.com/vasco3/react-polaroid#readme",
+  "dependencies": {
+    "babel": "^5.8.21",
+    "babel-eslint": "^4.0.6",
+    "eslint": "^1.1.0",
+    "eslint-plugin-react": "^3.2.2",
+    "faucet": "0.0.1",
+    "node-sass": "^3.2.0",
+    "pre-commit": "^1.1.1",
+    "react": "^0.13.3",
+    "systemjs": "^0.18.10",
+    "tape": "^4.2.0"
+  }
+}
