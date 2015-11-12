@@ -11,11 +11,11 @@ fs.readdir(dataPath, (err, files) => {
         const filePath = path.resolve(dataPath, f);
         const options = {encoding: 'utf8'};
 
-        let fileContent = fs.readFileSync(filePath, options);
+        const fileContent = fs.readFileSync(filePath, options);
         const {html, slug} = reactToHTML(fileContent);
         const outputPath = path.resolve(__dirname, 'public', slug.concat('.html'));
 
-        fs.writeFileSync(outputPath, html)
+        fs.writeFileSync(outputPath, html);
         console.log(outputPath, ' created');
     });
 });
